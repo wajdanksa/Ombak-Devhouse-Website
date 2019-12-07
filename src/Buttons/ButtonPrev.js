@@ -16,7 +16,7 @@ export default function OutlinedButtons() {
   return (
     <div className={classes.root}>
       
-      <Button variant="outlined" disabled>
+      <Button variant="outlined" >
         Previous
       </Button>
 

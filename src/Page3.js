@@ -6,7 +6,7 @@ import DenseAppBar from './AppBar';
 import Typography from '@material-ui/core/Typography';
 import Button_Next from './Buttons/Button_Next';
 import ButtonPrev from './Buttons/ButtonPrev';
-import { typography } from '@material-ui/system';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,57 +30,57 @@ export default function AutoGrid() {
       
       <Grid container spacing={3}>
         <Grid item sm={12}>
-          <Paper className={classes.paper}>
+          <div>
               <Typography variant="h7" component="h2" textAlign="left" > 
                 You picked Standard Website!
               </Typography>
               <Typography variant="subtitle1" component="h2">
                 Here's how it is going to go
               </Typography>
-            </Paper>
+          </div>  
         </Grid>
         <Grid item xs>
           <Paper className={classes.paper}><Grid item xs>
-          <Paper className={classes.paper}>
-          <Typography variant="h6" component="h2" textAlign="left" > 
+          <div>
+              <Typography variant="h6" component="h2" textAlign="left" > 
                 Stage 1: Understanding your business needs (2-3 days)
               </Typography>
               <p>Our team will spend the time to get to know your business.<br />
                 The more we are informed about what you want, the better solutions we can design for your business needs</p>
-          </Paper>
+          </div>
         </Grid>
         
         <Grid item xs>
-          <Paper className={classes.paper}>
+          <div>
               <Typography variant="h6" component="h2" textAlign="left" > 
                 Stage 2: Design Ui/Ux (1 week)
               </Typography>
               <p> You and our in-house web designer will design the overall user experience of your website. <br />
                   This part is critical to guide your future users to do business with you </p>
-          </Paper>
+          </div>
         </Grid>
         <Grid item xs>
-          <Paper className={classes.paper}>
+          <div>
               <Typography variant="h6" component="h2" textAlign="left" > 
                 Stage 3: Develpment (2+ weeks)
               </Typography>
               <p>This is where our core talents will work hard to bring what you and the designer came out with  in life. <br />
                   Minimal renditions are allowed once the project reaches this phase. </p>
-          </Paper>
+          </div>
         </Grid>
         
         <Grid item xs>
-          <Paper className={classes.paper}>
+          <div>
             <Typography variant="h6" component="h2" textAlign="left" >
               Stage 4: Test and Launch (1 week)
             </Typography>
             <p>All our work must me tested rigorously before it is launched. You will get to be part of our testing phase before the Launch!</p>
-          </Paper>
+          </div>
         </Grid>
         </Paper>
         </Grid>
         
-        <Grid item xs>
+        <Grid item xs zeroMinWidth>
           <Paper className={classes.paper}>
             <Grid item xs = {6}>
                 <h5>Estimated quotation </h5>
@@ -93,7 +93,7 @@ export default function AutoGrid() {
                   <p align='center'>name.com/com.my/.org/etc</p>
                 </Grid>
 
-                <Grid item xs>
+                <Grid item xs container justify = 'center'>
                   StateButton
                 </Grid>
         </Grid>
@@ -106,8 +106,8 @@ export default function AutoGrid() {
                   <p alight='center'>server that will keep your website online 24/7</p>
                 </Grid>
 
-                <Grid item xs>
-                    xs
+                <Grid item xs container justify = 'center'>
+                    StateButton
                 </Grid>
 
 
@@ -122,8 +122,8 @@ export default function AutoGrid() {
                   <p>one-time cost to develop the web</p>
                 </Grid>
 
-                <Grid item xs>
-                    xs
+                <Grid item xs container justify = 'center'>
+                    FeeAmount
                 </Grid>
 
 
@@ -138,8 +138,8 @@ export default function AutoGrid() {
                   <p>Maintenance fee to keep your website online 24/7</p>
                 </Grid>
 
-                <Grid item xs>
-                    xs
+                <Grid item xs container justify = 'center'>
+                    FeeAmount
                 </Grid>
 
 
@@ -157,7 +157,9 @@ export default function AutoGrid() {
           <ButtonPrev />
         </Grid>
         <Grid item xs>
-          <Paper className={classes.paper}><h6> Not sure what you are looking for?</h6>  <p>Schedule a time for consultation, it's free!</p></Paper>
+          <div align='center'>
+            <h5> Not sure what you are looking for?</h5>  <p>Schedule a time for consultation, it's free!</p> 
+          </div>
         </Grid>
         <Grid item xs align='center'>
           <Button_Next />
